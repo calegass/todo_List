@@ -1,0 +1,1 @@
+// Como o banco é NoSQL, não tenho um schema a ser seguido.
