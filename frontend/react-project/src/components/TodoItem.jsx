@@ -79,8 +79,10 @@ export default function TodoItem() {
 
   const handleDelete = async (taskId) => {
     try {
-      await service.deleteTask(taskId);
-      fetchTasks();
+      if (window.confirm("Tem certeza que deseja excluir esta tarefa?")) {
+        await service.deleteTask(taskId);
+        fetchTasks();
+      }
     } catch (error) {
       console.error("Erro ao excluir tarefa:", error);
     }
